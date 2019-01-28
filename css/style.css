@@ -48,6 +48,8 @@
 
   }
 body{
+  font-family: "times new";
+  /* background-attachment: fixed; */
   background: url(../images/hostel_management.jpg);
   background-repeat: no-repeat;background-size:cover;
 }
@@ -82,11 +84,14 @@ body{
 
 
 
-/* xxxxxxxxxxxxxxxxxxxxxxxxxxxx */
 
-.popup {
+
+
+
+
+.popup{
   
-  display: none;
+  display: none; 
   background-color: #FFFFFF;
   border-style: inset;
   border-radius: 5px;
