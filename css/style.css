@@ -42,10 +42,6 @@
   .form{
     padding-top: 130px; 
     padding-left:  40px;
-
-
-
-
   }
 body{
   font-family: "times new";
@@ -71,28 +67,34 @@ body{
 }
 
 .details {
-  font-family: sans-serif;
-  color: #2e2e97;
-
   position: absolute;
-  top: 140px;
+  top: 155px;
   left: 200px;
-  width: 300px;
-  height: 100px;
-
 }
 
+.butt {
+  font-family: sans-serif;
+  text-align: center;
+  font-size: 16px;
+  background-color:rgb(46, 125, 230);
+  border-radius: 12px;
 
-
-
-
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  bottom: 23px;
+  width: 180px;
+}
 
 
 
 .popup{
   
-  display: none; 
-  background-color: #FFFFFF;
+  display: grid ; 
+  background-color: #555;
+  opacity: 1;
   border-style: inset;
   border-radius: 5px;
   height: 550px;
