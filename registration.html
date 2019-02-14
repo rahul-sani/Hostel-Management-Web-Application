@@ -8,20 +8,17 @@
     </head>
 
     <body style="font-family:times new";> 
-        <form class = "form" >
+        <form class = "form"  action="php/signin.php" method="POST">
             <h1>Sign In.</h1>
             <p>Please fill in your username and password to Login.</p>
             
             <label for="username">Username</label>
-            <input type="text" placeholder="Enter username" name="email" required>
+            <input type="text" placeholder="Enter your name" name="name" required>
 
             <label for="password"><br><br>Password</label>
             <input type="password" placeholder="Enter password" name="password"required>
             <br>
-            <button class ="button button2" type="button" onclick="window.location.href='html/dashboard.html'" ><span>Login</span></button>
-            <!-- <h5>Not yet Registered? <a href="html/signUp.html" style="font-size: 15px;">signUp</a> </h5> -->
-            
-
+            <button class ="button button2" type="submit" " ><span>Login</span></button>            
 
         </form>
 
