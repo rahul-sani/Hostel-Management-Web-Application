@@ -7,7 +7,7 @@
 
         <link rel="stylesheet" type="text/css" href="../css/style.css">
     </head>
-        <form class="form">
+        <form class="form" action="../php/registration.php" method="POST">
             <h1>Registration</h1>
             <p>Please fill in your details.</p>
             
@@ -17,30 +17,29 @@
 
 
             <label for="Sex" style="padding:10px;">Sex:</label>
-            <select>
-                <option value="male" >Male</option>
-                <option value="female" >Female</option>
-                <option value="not  binary">Not binary</option>
+            <select  name="sex" >
+                <option value="m" >Male</option>
+                <option value="f" >Female</option>
+                <option value="n">Not binary</option>
             </select>
             <!-- <input type="text" placeholder="Sex" name="Sex" required> -->
 
-            <label for="Semester"><br><br>Semester:</label>
-            <input type="text" placeholder="Semester" name="Semester"required>
+            <label for="Semester" ><br><br>Semester:</label>
+            <input type="text" placeholder="Semester" name="sem"required>
             <br><br>
-
-
-        
-
-            <label for="Hostel Name" style="padding:10px;">Hostel Name:</label>
-            <select>
+            <label for="Hostel Name" style="padding:10px;" >Hostel Name:</label>
+            <select name="hostelName" >
                 <option value="Amritam" >Amritam</option>
                 <option value="Kailasam" >Kailasam</option>
                 <option value="Shivam">Shivam</option>
             </select>
 
+            <label for="password" name="password"><br><br>Password:</label>
+            <input type="password" placeholder="Password" name="password"required>
+
 
             <br><br>
-            <button class ="button button2"type="button"><span>Register</span></button>
+            <button class ="button button2"type="submit"><span>Register</span></button>
            
         </form>
     <body>
