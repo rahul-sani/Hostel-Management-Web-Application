@@ -10,10 +10,11 @@ This is a very simple Hostel Management Web application made using HTML, JavaScr
       b) Table name: student
       
       c) columns : 
-    >       id PRIMARY KEY AUTO_INCREMENT,
+    >       id INT AUTO_INCREMENT,
     >       name VARCHAR(50) NOT NULL,
     >       password VARCHAR(50) NOT NULL,
     >       hostelName VARCHAR(50) NOT NULL,
      >       sex CHAR(1) NOT NULL,
-     >       sem INT(1) NOT NULL
+     >       sem INT(1) NOT NULL,
+     >      PRIMARY KEY(id)
        
