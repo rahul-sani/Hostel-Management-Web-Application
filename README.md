@@ -16,5 +16,5 @@ This is a very simple Hostel Management Web application made using HTML, JavaScr
     >       hostelName VARCHAR(50) NOT NULL,
      >       sex CHAR(1) NOT NULL,
      >       sem INT(1) NOT NULL,
-     >      PRIMARY KEY(id)
+     >       PRIMARY KEY(id)
        
