@@ -1,0 +1,206 @@
+<?php
+  session_start();
+
+ $name = $_SESSION['username'];
+ if(isset($name)) {
+    echo "<script>
+    alert('Welcome,  $name');
+    </script>";
+    echo "<h2>Hello, $name </h2>";
+ }
+else {
+    header("location: ../login.php");
+
+}
+
+?>
+
+<!DOCTYPE html>
+
+<html>
+
+
+    <head>
+        <title>welcome</title>
+
+        <link rel="stylesheet" type="text/css" href="../css/style.css">
+
+        <script>
+                
+                function leavePop() {
+                    document.getElementById("vacate").style.display="none";
+                    document.getElementById("complaints").style.display="none";
+                    document.getElementById("feedback").style.display="none";
+                    document.getElementById("leave").style.display="grid";
+                }
+
+                function vacatePop() {
+                    document.getElementById("leave").style.display="none";
+                    document.getElementById("complaints").style.display="none";
+                    document.getElementById("feedback").style.display="none";
+                    document.getElementById("vacate").style.display="grid"; 
+                }
+
+                function regisPop() {
+                    document.getElementById("leave").style.display="none";
+                    document.getElementById("vacate").style.display="none"; 
+                    document.getElementById("feedback").style.display="none";
+                    document.getElementById("complaints").style.display="grid";
+                    }
+
+                function feedbackPop() {
+                    document.getElementById("leave").style.display="none";
+                    document.getElementById("vacate").style.display="none"; 
+                    document.getElementById("complaints").style.display="none";
+                    document.getElementById("feedback").style.display="grid";
+                    }    
+        </script>
+
+    </head>
+
+    <body >
+
+     
+      <div class="icons">
+         
+          <img  alt="leave request" onclick="leavePop()" src=".././images/leave-req.png" width="100" height="100"><br>
+          <img alt="vacate" onclick="vacatePop()" src=".././images/vacate.jpeg" width="100" height="100"><br>
+          <img alt="complaint" onclick="regisPop()" src=".././images/complaint.png" width="100" height="100"><br>
+          <img alt="feedback" onclick="feedbackPop()" src=".././images/feedback.png" width="100" height="100"><br>
+
+          
+
+        </div>
+
+        <div class="details" >
+           <br><h2 ><button  class="butt" onclick="leavePop()">LEAVE REQUEST</button></h2><br>
+            <h2 ><button class="butt" onclick="vacatePop()">VACATE ROOM</button></h2><br>
+            <h2 ><button class="butt" onclick="regisPop()">REG. COMPLAINT</button></h2><br>
+            <h2 ><button class="butt" onclick="feedbackPop()">FEEDBACK</button></h2>
+
+        </div>
+
+        <!-- Leave PoP up -->
+
+        <div class="popup" id="leave"> 
+                <div >
+                <form  style=" padding-left: 40px;color:#FFFFFF">
+                    <h1>LEAVE REQUEST</h1><br><br>
+                    <p>Please fill in the details for requesting leave.</p>
+                    
+                    <label for="name">Name</label>
+                    <input type="text" placeholder="Enter your Name" name="Name" required><br><br>
+        
+                    <label for="Hostel Name" style="padding:10px;">Hostel Name:</label> 
+                <select>
+                    <option value="Amritam" >Amritam</option>
+                    <option value="Kailasam" >Kailasam</option>
+                    <option value="Shivam">Shivam</option>
+                </select>
+                <br>
+                    <label for="Date"  >Date :</label>
+                    <input type="date" placeholder="Till Date" name="date" required><br><br>
+
+                    <br>
+                    <button class ="button button2" type="button" onclick="" ><span>Submit</span></button>                    
+                </form>
+            </div>
+        </div>
+
+        <!-- Vacate Pop up -->
+
+        <div class="popup" id="vacate"> 
+            <div >
+            <form  style=" padding-left: 40px;color:#FFFFFF">
+                <h1>VACATE ROOM</h1><br><br>
+                <p>Please fill in the details for vacating rooms.</p>
+                
+                <label for="name">Name</label>
+                <input type="text" placeholder="Enter your Name" name="Name" required><br><br>
+    
+                <label for="Hostel Name" style="padding:10px;">Hostel Name:</label> 
+            <select>
+                <option value="Amritam" >Amritam</option>
+                <option value="Kailasam" >Kailasam</option>
+                <option value="Shivam">Shivam</option>
+            </select>
+                <br><br>
+                <label for="roomno">Room No :</label>
+                <input type="number" placeholder="Enter the room no:" name="Roomno" required><br>
+                <button class ="button button2" type="button" onclick="" ><span>Submit</span></button>
+            </form>
+        </div>
+    </div>
+        
+
+    <!-- Register Complaint popup -->
+
+    <div class="popup" id="complaints"> 
+        <div >
+        <form  style=" padding-left: 40px;color:#FFFFFF">
+            <h1>REGISTER COMPLAINTS</h1><br><br>
+            <p>Please fill in the details for registering a complaint.</p>
+            
+            <label for="name">Name</label>
+            <input type="text" placeholder="Enter your Name" name="Name" required><br><br>
+
+            <label for="Hostel Name" style="padding:10px;">Hostel Name:</label> 
+        <select>
+            <option value="Amritam" >Amritam</option>
+            <option value="Kailasam" >Kailasam</option>
+            <option value="Shivam">Shivam</option>
+        </select>
+            <br><br>
+            <label for="complaint">Complaint :</label><br>
+            <textarea  placeholder="Write your complaint please" style="height:200px;width: 400px" name="complaint"></textarea><br>
+            <button class ="button button2" type="button" onclick="" ><span>Submit</span></button> 
+        </form>
+    </div> 
+</div>
+
+
+
+    <!-- feedback popup -->
+
+    <div class="popup" id="feedback"> 
+        <div >
+        <form  style=" padding-left: 40px;color:#FFFFFF">
+            <h1>FEEDBACK</h1><br><br>
+            <p>Please enter your feedback.</p>
+            
+            <label for="name">Name</label>
+            <input type="text" placeholder="Enter your Name" name="Name" required><br><br>
+
+            <label for="Hostel Name" style="padding:10px;">Hostel Name:</label> 
+        <select>
+            <option value="Amritam" >Amritam</option>
+            <option value="Kailasam" >Kailasam</option>
+            <option value="Shivam">Shivam</option>
+        </select>
+            <br><br>
+            <label for="complaint">feedback :</label><br>
+            <textarea  placeholder="Write your feedback please" style="height:200px;width: 400px" name="feedback"></textarea><br>
+          
+            <button class ="button button2" type="button" onclick="" ><span>Submit</span></button> 
+        </form>
+    </div> 
+</div>
+
+    
+
+    <div >
+        <button class ="button logout" type="button" onclick="location.href = 'logout.php'" ><span>LOGOUT</span></button>
+
+        
+    </div>
+
+
+
+
+
+    </body>
+
+
+</html>
+
+

@@ -27,7 +27,7 @@ if (!empty($name) || !empty($sem) || !empty($hostelName) || !empty($sex) || !emp
         if (mysqli_query($connection, $sql)) {
             echo "<script>
             alert('succesfully registered!');
-            window.location.href='../registration.html';
+            window.location.href='../login.php';
             </script>";  
             
         } else {
