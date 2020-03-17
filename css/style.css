@@ -10,6 +10,8 @@
     width: 150px;
     transition: all 0.5s;
     cursor: pointer;
+    position: relative;
+
     margin: 5px;
   }
   
@@ -88,6 +90,14 @@ body{
   width: 180px;
 }
 
+.logout {
+  position: absolute;
+  top: 20px;
+  left: 1300px;
+  background-color: rgb(209, 2, 2);
+
+
+}
 
 
 .popup{
